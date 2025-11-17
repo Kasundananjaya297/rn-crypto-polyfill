@@ -1,0 +1,50 @@
+{
+  "name": "@binarywise/rn-crypto-polyfill",
+  "version": "1.0.0",
+  "description": "Comprehensive crypto polyfills for React Native - provides crypto.getRandomValues, TextEncoder, TextDecoder, and ReadableStream for AWS SDK and other libraries",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint .",
+    "prepare": "npm run test"
+  },
+  "keywords": [
+    "react-native",
+    "crypto",
+    "polyfill",
+    "getRandomValues",
+    "TextEncoder",
+    "TextDecoder",
+    "ReadableStream",
+    "aws-sdk",
+    "crypto-polyfill"
+  ],
+  "author": "Binarywise",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/rn-crypto-polyfill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/rn-crypto-polyfill/issues"
+  },
+  "homepage": "https://github.com/yourusername/rn-crypto-polyfill#readme",
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "babel-jest": "^29.7.0",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
