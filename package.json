@@ -24,12 +24,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/rn-crypto-polyfill.git"
+    "url": "https://github.com/Kasundananjaya297/rn-crypto-polyfill.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/rn-crypto-polyfill/issues"
+    "url": "https://github.com/Kasundananjaya297/rn-crypto-polyfill/issues"
   },
-  "homepage": "https://github.com/yourusername/rn-crypto-polyfill#readme",
+  "homepage": "https://github.com/Kasundananjaya297/rn-crypto-polyfill#readme",
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
