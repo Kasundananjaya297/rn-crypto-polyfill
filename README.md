@@ -16,13 +16,13 @@ Comprehensive crypto polyfills for React Native applications. Provides implement
 ## 📦 Installation
 
 ```bash
-npm install @binarywise/rn-crypto-polyfill
+npm install rn-crypto-polyfill
 ```
 
 or
 
 ```bash
-yarn add @binarywise/rn-crypto-polyfill
+yarn add rn-crypto-polyfill
 ```
 
 ## 🔧 Usage
