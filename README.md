@@ -1,4 +1,4 @@
-# @binarywise/rn-crypto-polyfill
+# rn-crypto-polyfill
 
 Comprehensive crypto polyfills for React Native applications. Provides implementations for `crypto.getRandomValues`, `TextEncoder`, `TextDecoder`, and `ReadableStream` that are required by AWS SDK and other libraries.
 
@@ -180,12 +180,12 @@ Make sure the import is at the **very top** of your entry file, before any other
 ❌ Wrong:
 ```javascript
 import { S3Client } from '@aws-sdk/client-s3';
-import '@binarywise/rn-crypto-polyfill'; // Too late!
+import 'rn-crypto-polyfill'; // Too late!
 ```
 
 ✅ Correct:
 ```javascript
-import '@binarywise/rn-crypto-polyfill'; // First!
+import 'rn-crypto-polyfill'; // First!
 import { S3Client } from '@aws-sdk/client-s3';
 ```
 
