@@ -1,6 +1,6 @@
 {
   "name": "rn-crypto-polyfill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Comprehensive crypto polyfills for React Native - provides crypto.getRandomValues, TextEncoder, TextDecoder, and ReadableStream for AWS SDK and other libraries",
   "main": "index.js",
   "types": "index.d.ts",
