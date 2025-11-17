@@ -24,7 +24,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kasundananjaya297/rn-crypto-polyfill.git"
+    "url": "git+https://github.com/Kasundananjaya297/rn-crypto-polyfill.git"
   },
   "bugs": {
     "url": "https://github.com/Kasundananjaya297/rn-crypto-polyfill/issues"
