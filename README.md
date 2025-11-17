@@ -1,5 +1,8 @@
 # rn-crypto-polyfill
 
+[![npm version](https://img.shields.io/npm/v/rn-crypto-polyfill.svg)][npm]
+[![license](https://img.shields.io/npm/l/rn-crypto-polyfill.svg)]
+
 Comprehensive crypto polyfills for React Native applications. Provides implementations for `crypto.getRandomValues`, `TextEncoder`, `TextDecoder`, and `ReadableStream` that are required by AWS SDK and other libraries.
 
 ## 🚀 Features
@@ -33,7 +36,7 @@ Import the polyfill at the **very beginning** of your app's entry point (usually
 
 ```javascript
 // index.js
-import '@binarywise/rn-crypto-polyfill';
+import 'rn-crypto-polyfill';
 
 import { AppRegistry } from 'react-native';
 import App from './App';
@@ -49,7 +52,7 @@ That's it! All polyfills are now available globally.
 You can customize the behavior of the polyfills:
 
 ```javascript
-import { configure } from '@binarywise/rn-crypto-polyfill';
+import { configure } from 'rn-crypto-polyfill';
 
 configure({
   enableLogging: true,      // Enable debug logging (default: false)
@@ -62,7 +65,7 @@ configure({
 ### AWS SDK S3 Operations
 
 ```javascript
-import '@binarywise/rn-crypto-polyfill';
+import 'rn-crypto-polyfill';
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
 import { Sha256 } from '@aws-crypto/sha256-js';
 
@@ -81,7 +84,7 @@ const client = new S3Client({
 ### UUID Generation
 
 ```javascript
-import '@binarywise/rn-crypto-polyfill';
+import 'rn-crypto-polyfill';
 import { v4 as uuidv4 } from 'uuid';
 
 const id = uuidv4(); // Works perfectly!
@@ -163,7 +166,7 @@ Configure the polyfill behavior.
 
 **Example:**
 ```javascript
-import { configure } from '@binarywise/rn-crypto-polyfill';
+import { configure } from 'rn-crypto-polyfill';
 
 configure({
   enableLogging: __DEV__,
@@ -219,3 +222,38 @@ Inspired by the React Native community's need for Web Crypto API compatibility.
 - [AWS SDK for JavaScript v3](https://github.com/aws/aws-sdk-js-v3)
 - [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API)
 - [TextEncoder API](https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder)
+
+## 📦 Publishing to npm
+
+Before publishing, make sure the package metadata in `package.json` is correct (name, version, description, repository, license, files). Quick checklist:
+
+- Run the test suite: `npm test`
+- Confirm `version` in `package.json` is the value you want to publish
+- Confirm `files` includes the build/output files and `index.js`/`index.d.ts`
+- Ensure `repository`, `bugs`, and `homepage` fields are set (for npm linking)
+
+Example publish flow (from the project root):
+
+```bash
+# Log in to npm (only needed once per session)
+npm login
+
+# Bump the version (patch/minor/major) and tag the commit
+npm version patch -m "Release %s"
+
+# Publish the package to npm
+npm publish
+```
+
+If you publish a scoped package (for example `@your-scope/your-package`) and want it public, use:
+
+```bash
+npm publish --access public
+```
+
+Notes:
+
+- If you have CI that runs on tags, pushing the tag may trigger releases — choose your workflow accordingly.
+- If you enable npm 2FA, follow npm's flow for generating one-time passwords when publishing.
+
+[npm]: https://www.npmjs.com/package/rn-crypto-polyfill
